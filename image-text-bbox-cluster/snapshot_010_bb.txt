@@ -1,0 +1,13 @@
+Bounding box: [[3.0, 6.0], [434.0, 4.0], [434.0, 24.0], [3.0, 26.0]], Text: he projectile is fired from a front end of the
+Bounding box: [[2.0, 32.0], [433.0, 35.0], [433.0, 56.0], [2.0, 53.0]], Text: ectile launcher includes a first power group
+Bounding box: [[2.0, 63.0], [435.0, 63.0], [435.0, 83.0], [2.0, 83.0]], Text:  side. The first power group includes a
+Bounding box: [[3.0, 91.0], [435.0, 91.0], [435.0, 114.0], [3.0, 114.0]], Text: power group drawstring pulleys. At least
+Bounding box: [[3.0, 119.0], [435.0, 119.0], [435.0, 142.0], [3.0, 142.0]], Text: lity of first power group drawstring pulleys
+Bounding box: [[2.0, 147.0], [436.0, 147.0], [436.0, 170.0], [2.0, 170.0]], Text: he frame. The projectile launcher further
+Bounding box: [[2.0, 176.0], [435.0, 176.0], [435.0, 199.0], [2.0, 199.0]], Text: d power group at a second frame side. The
+Bounding box: [[2.0, 204.0], [435.0, 205.0], [435.0, 226.0], [2.0, 225.0]], Text: roup includes a plurality of second power
+Bounding box: [[2.0, 233.0], [437.0, 230.0], [437.0, 254.0], [2.0, 257.0]], Text: g pulleys. At least one of the plurality of
+Bounding box: [[2.0, 263.0], [434.0, 261.0], [434.0, 282.0], [2.0, 284.0]], Text: roup drawstring pulleys is attached to the
+Bounding box: [[2.0, 291.0], [435.0, 288.0], [435.0, 309.0], [2.0, 312.0]], Text: vstring is configured to be routed at least
+Bounding box: [[3.0, 318.0], [433.0, 319.0], [433.0, 340.0], [3.0, 339.0]], Text: the first and second power group drawstring
+Bounding box: [[9.0, 398.0], [298.0, 400.0], [298.0, 421.0], [9.0, 419.0]], Text: Claims, 43 Drawing Sheets
