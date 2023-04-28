@@ -1,1 +1,15 @@
-[[[73.0, 46.0], [481.0, 45.0], [481.0, 65.0], [73.0, 66.0]], ('The atomic mass number is the average of all the', 0.9915638566017151)]
+Bounding box: [[358.0, 9.0], [434.0, 9.0], [434.0, 27.0], [358.0, 27.0]], Text: 124/20.1
+Bounding box: [[17.0, 29.0], [187.0, 32.0], [187.0, 53.0], [17.0, 50.0]], Text: * 10/1997 Wing
+Bounding box: [[339.0, 33.0], [434.0, 33.0], [434.0, 50.0], [339.0, 50.0]], Text: F41B 3/02
+Bounding box: [[373.0, 55.0], [436.0, 55.0], [436.0, 76.0], [373.0, 76.0]], Text: 124/17
+Bounding box: [[79.0, 85.0], [195.0, 85.0], [195.0, 106.0], [79.0, 106.0]], Text: (Continued)
+Bounding box: [[6.0, 146.0], [269.0, 146.0], [269.0, 163.0], [6.0, 163.0]], Text: OTHER PUBLICATIONS
+Bounding box: [[5.0, 196.0], [434.0, 196.0], [434.0, 213.0], [5.0, 213.0]], Text: Searching Authority: International Search Report
+Bounding box: [[3.0, 225.0], [434.0, 225.0], [434.0, 242.0], [3.0, 242.0]], Text: on of the International Searching Authority for
+Bounding box: [[1.0, 250.0], [315.0, 252.0], [315.0, 272.0], [1.0, 270.0]], Text: 105 dated Dec. 15, 2020; 16 pages
+Bounding box: [[77.0, 283.0], [198.0, 283.0], [198.0, 307.0], [77.0, 307.0]], Text: (Continued)
+Bounding box: [[2.0, 336.0], [243.0, 336.0], [243.0, 356.0], [2.0, 356.0]], Text: er -- John E Simms, Jr.
+Bounding box: [[2.0, 368.0], [399.0, 367.0], [399.0, 388.0], [2.0, 389.0]], Text: gent, or Firm -- Foley & Lardner LLP
+Bounding box: [[69.0, 420.0], [205.0, 420.0], [205.0, 440.0], [69.0, 440.0]], Text: ABSTRACT
+Bounding box: [[2.0, 459.0], [433.0, 459.0], [433.0, 482.0], [2.0, 482.0]], Text: incher includes a frame and a projectile
+Bounding box: [[10.0, 487.0], [434.0, 488.0], [434.0, 508.0], [10.0, 507.0]], Text: horizontal projectile plane and along the

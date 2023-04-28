@@ -1,5 +1,4 @@
 import os
-import easyocr
 import shutil
 import numpy as np
 from pdf2image import convert_from_path
@@ -27,9 +26,11 @@ def extract_text_and_boxes(snapshots):
         for img in page_snapshots:
             img_array = np.array(img)
             result = ocr.ocr(img_array)
-            page_result.append(result)
+            # Flatten the result and extend the page_result list.
+            page_result.extend(result)
         results.append(page_result)
     return results
+
 
 def save_snapshot_image(image, snapshot_idx, output_dir):
     image_path = f"{output_dir}/snapshot_{snapshot_idx:03}.png"
@@ -51,11 +52,10 @@ def save_results(snapshots, text_and_boxes):
                 
                 # Save bounding box and text information
                 with open(f"{output_dir}/snapshot_{snapshot_counter:03}_bb.txt", "w") as bb_file:
-
                     for line in result:
                         if len(line) >= 2 and len(line[1]) > 0:
                             bbox, text = line[0], line[1][0]
-                            bb_file.write(f"{bbox}\n")
+                            bb_file.write(f"Bounding box: {bbox}, Text: {text}\n")
                 
                 snapshot_counter += 1
 
@@ -80,27 +80,21 @@ def main(pdf_path):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-    # Initialize the EasyOCR reader
-    reader = easyocr.Reader(['en'], gpu=True)
-    ## SAME HERE
-    # reader = easyocr.Reader(['en'], device=device)
+    # Iterate through the bounding box files in the input folder
+    for bb_file in os.listdir(input_folder):
+        if bb_file.endswith('_bb.txt'):
+            input_path = os.path.join(input_folder, bb_file)
 
-    # Iterate through the images in the input folder
-    for image_file in os.listdir(input_folder):
-        if image_file.endswith('.png') or image_file.endswith('.jpg'):
-            input_path = os.path.join(input_folder, image_file)
-
-            # Perform OCR on the image
-            result = reader.readtext(input_path)
-
-            # Extract the recognized text
-            text = '\n'.join([item[1] for item in result])
+            # Load the bounding boxes and texts
+            with open(input_path, 'r') as f:
+                bbox_texts = [line.strip() for line in f.readlines()]
 
             # Save the text to the output folder
-            text_file = f"{os.path.splitext(image_file)[0]}_txt.txt"
+            text_file = f"{os.path.splitext(bb_file)[0]}_txt.txt"
             text_path = os.path.join(output_folder, text_file)
             with open(text_path, 'w') as f:
-                f.write(text)
+                for bbox_text in bbox_texts:
+                    f.write(f"{bbox_text}\n")
 
     # Move files from 'output-images' and 'output-image-text' to 'image-text-bbox-cluster'
     final_output_dir = 'image-text-bbox-cluster'
