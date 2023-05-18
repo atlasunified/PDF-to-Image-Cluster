@@ -3,6 +3,24 @@ import shutil
 import numpy as np
 from pdf2image import convert_from_path
 from paddleocr import PaddleOCR
+from PIL import Image
+
+def convert_pdf_to_images(pdf_path, snapshot_size=(512, 512)):
+    pages = convert_from_path(pdf_path)
+    snapshots = [extract_snapshots(page, snapshot_size) for page in pages]
+
+    # Combine all page images into one
+    if pages:
+        max_width = max([page.width for page in pages])
+        total_height = sum([page.height for page in pages])
+        pdf_image = Image.new('RGB', (max_width, total_height))
+        current_height = 0
+        for page in pages:
+            pdf_image.paste(page, (0, current_height))
+            current_height += page.height
+        pdf_image.save("whole_pdf_image.png")
+
+    return snapshots
 
 def extract_snapshots(image, snapshot_size=(512, 512)):
     width, height = image.size
@@ -11,11 +29,6 @@ def extract_snapshots(image, snapshot_size=(512, 512)):
         for x in range(0, width, snapshot_size[0]):
             snapshot = image.crop((x, y, x + snapshot_size[0], y + snapshot_size[1]))
             snapshots.append(snapshot)
-    return snapshots
-
-def convert_pdf_to_images(pdf_path, snapshot_size=(512, 512)):
-    pages = convert_from_path(pdf_path)
-    snapshots = [extract_snapshots(page, snapshot_size) for page in pages]
     return snapshots
 
 def extract_text_and_boxes(snapshots):
@@ -48,15 +61,23 @@ def save_results(snapshots, text_and_boxes):
                 output_file.write(f"snapshot_{snapshot_counter + 1}:\n")
                 
                 # Save snapshot image
+                image_path = f"{output_dir}/snapshot_{snapshot_counter:03}.png"
                 save_snapshot_image(snapshot_image, snapshot_counter, output_dir)
                 
                 # Save bounding box and text information
-                with open(f"{output_dir}/snapshot_{snapshot_counter:03}_bb.txt", "w") as bb_file:
+                bb_file_path = f"{output_dir}/snapshot_{snapshot_counter:03}_bb.txt"
+                with open(bb_file_path, "w") as bb_file:
                     for line in result:
                         if len(line) >= 2 and len(line[1]) > 0:
                             bbox, text = line[0], line[1][0]
                             bb_file.write(f"Bounding box: {bbox}, Text: {text}\n")
                 
+                # Check if bounding box text file is empty and if so delete it and its corresponding image
+                if os.stat(bb_file_path).st_size == 0:
+                    os.remove(bb_file_path)
+                    if os.path.exists(image_path):
+                        os.remove(image_path)
+                        
                 snapshot_counter += 1
 
             output_file.write("\n")
@@ -88,13 +109,6 @@ def main(pdf_path):
             # Load the bounding boxes and texts
             with open(input_path, 'r') as f:
                 bbox_texts = [line.strip() for line in f.readlines()]
-
-            # Save the text to the output folder
-            text_file = f"{os.path.splitext(bb_file)[0]}_txt.txt"
-            text_path = os.path.join(output_folder, text_file)
-            with open(text_path, 'w') as f:
-                for bbox_text in bbox_texts:
-                    f.write(f"{bbox_text}\n")
 
     # Move files from 'output-images' and 'output-image-text' to 'image-text-bbox-cluster'
     final_output_dir = 'image-text-bbox-cluster'
