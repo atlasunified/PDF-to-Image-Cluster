@@ -1,5 +1,0 @@
-Bounding box: [[7.0, 7.0], [496.0, 7.0], [496.0, 17.0], [7.0, 17.0]], Text: sueetoratteccntefstyentstCaao
-Bounding box: [[2.0, 187.0], [488.0, 189.0], [488.0, 219.0], [2.0, 217.0]], Text: and non-controversial.The Planning
-Bounding box: [[3.0, 228.0], [489.0, 225.0], [489.0, 251.0], [3.0, 254.0]], Text: ssion.Any Councilmember or staff
-Bounding box: [[6.0, 265.0], [250.0, 265.0], [250.0, 286.0], [6.0, 286.0]], Text: enda for discussion
-Bounding box: [[8.0, 308.0], [488.0, 307.0], [488.0, 334.0], [8.0, 335.0]], Text: any ordinance listed on the Consent

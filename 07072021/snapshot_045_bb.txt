@@ -1,9 +1,0 @@
-Bounding box: [[4.0, 6.0], [505.0, 6.0], [505.0, 29.0], [4.0, 29.0]], Text:  square foot detachedAccessoryDwel
-Bounding box: [[3.0, 40.0], [505.0, 43.0], [505.0, 67.0], [3.0, 64.0]], Text: w to construct a 754 square foot garage
-Bounding box: [[4.0, 78.0], [392.0, 76.0], [392.0, 99.0], [4.0, 101.0]], Text: Date Ave:APN:0303-202-04
-Bounding box: [[4.0, 144.0], [500.0, 147.0], [500.0, 174.0], [4.0, 171.0]], Text: TION: That the Planning Commission
-Bounding box: [[2.0, 219.0], [507.0, 221.0], [507.0, 247.0], [2.0, 245.0]], Text: architectural design of the proposed
-Bounding box: [[5.0, 256.0], [507.0, 257.0], [507.0, 284.0], [5.0, 283.0]], Text: design subject to the Conditions of Ap
-Bounding box: [[6.0, 330.0], [507.0, 330.0], [507.0, 357.0], [6.0, 357.0]], Text: pecial Use Permit Findings as containe
-Bounding box: [[4.0, 405.0], [508.0, 403.0], [508.0, 430.0], [4.0, 432.0]], Text: tegorical Exemption pursuant to the C
-Bounding box: [[6.0, 442.0], [507.0, 442.0], [507.0, 466.0], [6.0, 466.0]], Text: e CEQA Guidelines.as amended.Secti

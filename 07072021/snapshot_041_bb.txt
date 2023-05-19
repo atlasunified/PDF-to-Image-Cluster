@@ -1,7 +1,0 @@
-Bounding box: [[5.0, 183.0], [506.0, 184.0], [506.0, 208.0], [5.0, 207.0]], Text: sistant Planner.Madeline Jordan presen
-Bounding box: [[6.0, 222.0], [499.0, 222.0], [499.0, 246.0], [6.0, 246.0]], Text: the dogs are to be put up from 2-4 p.m
-Bounding box: [[8.0, 256.0], [508.0, 258.0], [508.0, 281.0], [8.0, 279.0]], Text: for Condition #13 to be modified to rer
-Bounding box: [[3.0, 329.0], [504.0, 329.0], [504.0, 352.0], [3.0, 352.0]], Text: DNBYCOMMISSIONERWOLFE.
-Bounding box: [[2.0, 367.0], [506.0, 369.0], [506.0, 389.0], [2.0, 387.0]], Text: TAFFRECOMMENDATONSWIT
-Bounding box: [[2.0, 401.0], [423.0, 403.0], [423.0, 430.0], [2.0, 428.0]], Text: MOTION CARRIED 5-0-0-2.
-Bounding box: [[6.0, 478.0], [508.0, 478.0], [508.0, 501.0], [6.0, 501.0]], Text: Knight(Case No.21-042/LUCR/SUP/A

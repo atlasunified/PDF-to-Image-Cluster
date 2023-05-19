@@ -1,5 +1,0 @@
-Bounding box: [[213.0, 250.0], [452.0, 253.0], [452.0, 284.0], [213.0, 281.0]], Text: City of Yucaipa
-Bounding box: [[26.0, 296.0], [505.0, 296.0], [505.0, 320.0], [26.0, 320.0]], Text: PLANNINGCOMMISSIONM
-Bounding box: [[84.0, 336.0], [503.0, 338.0], [503.0, 368.0], [84.0, 366.0]], Text: Regular Meeting of July 7,
-Bounding box: [[3.0, 417.0], [507.0, 416.0], [507.0, 443.0], [3.0, 444.0]], Text: lanning Commission of the City of Yu
-Bounding box: [[7.0, 454.0], [507.0, 454.0], [507.0, 481.0], [7.0, 481.0]], Text: oom,34272 Yucaipa Boulevard,Yucai

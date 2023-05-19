@@ -1,7 +1,0 @@
-Bounding box: [[270.0, 183.0], [508.0, 183.0], [508.0, 204.0], [270.0, 204.0]], Text: DISCUSSION:A
-Bounding box: [[266.0, 219.0], [507.0, 219.0], [507.0, 243.0], [266.0, 243.0]], Text: was a Code Enfor
-Bounding box: [[267.0, 255.0], [509.0, 255.0], [509.0, 282.0], [267.0, 282.0]], Text: Building and Safet
-Bounding box: [[270.0, 324.0], [510.0, 321.0], [510.0, 345.0], [270.0, 348.0]], Text: ACTION: MOTI
-Bounding box: [[270.0, 361.0], [510.0, 361.0], [510.0, 385.0], [270.0, 385.0]], Text: WOLF TO APPR
-Bounding box: [[271.0, 435.0], [507.0, 432.0], [507.0, 456.0], [271.0, 459.0]], Text: ANNOUNCEME
-Bounding box: [[267.0, 473.0], [507.0, 470.0], [507.0, 497.0], [267.0, 500.0]], Text: meeting will most
