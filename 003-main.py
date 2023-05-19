@@ -11,17 +11,6 @@ def convert_pdf_to_images(pdf_path, snapshot_size=(512, 512)):
     pages = convert_from_path(pdf_path)
     snapshots = [extract_snapshots(page, snapshot_size) for page in pages]
 
-    # Combine all page images into one
-    if pages:
-        max_width = max([page.width for page in pages])
-        total_height = sum([page.height for page in pages])
-        pdf_image = Image.new('RGB', (max_width, total_height))
-        current_height = 0
-        for page in pages:
-            pdf_image.paste(page, (0, current_height))
-            current_height += page.height
-        pdf_image.save("whole_pdf_image.png")
-
     return snapshots
 
 def extract_snapshots(image, snapshot_size=(512, 512)):
