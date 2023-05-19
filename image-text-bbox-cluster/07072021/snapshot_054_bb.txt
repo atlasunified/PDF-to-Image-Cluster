@@ -1,0 +1,5 @@
+Bounding box: [[3.0, 40.0], [502.0, 41.0], [502.0, 68.0], [3.0, 67.0]], Text: carport, and if it is acceptable, approve
+Bounding box: [[0.0, 77.0], [33.0, 77.0], [33.0, 103.0], [0.0, 103.0]], Text: nd
+Bounding box: [[4.0, 151.0], [360.0, 151.0], [360.0, 178.0], [4.0, 178.0]], Text:  in the Agenda Report; and
+Bounding box: [[2.0, 223.0], [504.0, 224.0], [504.0, 251.0], [2.0, 250.0]], Text: lifornia Environmental Quality Act of
+Bounding box: [[4.0, 260.0], [308.0, 261.0], [308.0, 288.0], [4.0, 287.0]], Text: on 15303(Class 3);and

@@ -1,0 +1,6 @@
+Bounding box: [[4.0, 56.0], [503.0, 52.0], [503.0, 79.0], [4.0, 83.0]], Text: npermitted metal structures that will
+Bounding box: [[3.0, 94.0], [503.0, 91.0], [503.0, 118.0], [3.0, 121.0]], Text: ng on his property, and if both are
+Bounding box: [[3.0, 130.0], [502.0, 129.0], [502.0, 156.0], [3.0, 157.0]], Text: subject to the Conditions of Approval:
+Bounding box: [[3.0, 239.0], [363.0, 240.0], [363.0, 267.0], [3.0, 266.0]], Text: d in the Agenda Report; and
+Bounding box: [[4.0, 315.0], [503.0, 315.0], [503.0, 339.0], [4.0, 339.0]], Text: lifornia Environmental Quality Act of
+Bounding box: [[6.0, 351.0], [309.0, 351.0], [309.0, 378.0], [6.0, 378.0]], Text: on 15303(Class 3);and

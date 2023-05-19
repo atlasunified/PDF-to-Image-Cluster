@@ -1,0 +1,6 @@
+Bounding box: [[5.0, 184.0], [495.0, 182.0], [495.0, 208.0], [5.0, 210.0]], Text: ed the project.The Commission asked
+Bounding box: [[5.0, 221.0], [495.0, 220.0], [495.0, 244.0], [5.0, 245.0]], Text: Condition #13.After discussion.the
+Bounding box: [[3.0, 255.0], [276.0, 257.0], [276.0, 284.0], [3.0, 282.0]], Text: nove the 2-4 pm time.
+Bounding box: [[2.0, 329.0], [495.0, 330.0], [495.0, 354.0], [2.0, 353.0]], Text: SECONDBYCHAIRALLGOWER
+Bounding box: [[3.0, 366.0], [494.0, 368.0], [494.0, 391.0], [3.0, 389.0]], Text: HTHE CONDITIONTOMODIFY
+Bounding box: [[5.0, 476.0], [495.0, 478.0], [495.0, 502.0], [5.0, 500.0]], Text: RC):ALand Use Compliance Review

@@ -1,0 +1,8 @@
+Bounding box: [[180.0, 4.0], [504.0, 4.0], [504.0, 18.0], [180.0, 18.0]], Text: wouldnkeustobecreau
+Bounding box: [[177.0, 34.0], [508.0, 32.0], [508.0, 56.0], [177.0, 58.0]], Text: creating another strip mal
+Bounding box: [[177.0, 101.0], [477.0, 101.0], [477.0, 125.0], [177.0, 125.0]], Text: CONSENT AGENDA
+Bounding box: [[220.0, 190.0], [509.0, 193.0], [509.0, 220.0], [220.0, 217.0]], Text: The following Consen
+Bounding box: [[221.0, 229.0], [498.0, 229.0], [498.0, 253.0], [221.0, 253.0]], Text: Commission will act
+Bounding box: [[219.0, 266.0], [510.0, 266.0], [510.0, 293.0], [219.0, 293.0]], Text: member may request r
+Bounding box: [[222.0, 310.0], [506.0, 310.0], [506.0, 334.0], [222.0, 334.0]], Text: The title is deemed to
+Bounding box: [[222.0, 347.0], [507.0, 343.0], [507.0, 371.0], [222.0, 375.0]], Text: Agenda for second rea
