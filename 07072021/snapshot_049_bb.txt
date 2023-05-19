@@ -1,0 +1,10 @@
+Bounding box: [[8.0, 4.0], [388.0, 5.0], [388.0, 29.0], [8.0, 28.0]], Text: to file a Notice of Exemption.
+Bounding box: [[3.0, 76.0], [507.0, 78.0], [507.0, 102.0], [3.0, 100.0]], Text: ssistant Planner.Madeline Jordan prese
+Bounding box: [[4.0, 115.0], [508.0, 115.0], [508.0, 139.0], [4.0, 139.0]], Text: ll required standards,and the SUP cove
+Bounding box: [[4.0, 186.0], [509.0, 187.0], [509.0, 210.0], [4.0, 209.0]], Text: ON BY COMMISIONER WOLFF
+Bounding box: [[5.0, 225.0], [507.0, 225.0], [507.0, 245.0], [5.0, 245.0]], Text: OVESTAFFRECOMMENDATION
+Bounding box: [[4.0, 298.0], [505.0, 297.0], [505.0, 321.0], [4.0, 322.0]], Text: da Osvald (Case No. 21-050/SUP/A
+Bounding box: [[4.0, 335.0], [506.0, 336.0], [506.0, 360.0], [4.0, 359.0]], Text: ew of a 12-foot-tall.630 square foot u
+Bounding box: [[9.0, 373.0], [507.0, 373.0], [507.0, 397.0], [9.0, 397.0]], Text: on three(3 sides and is located on a sin
+Bounding box: [[5.0, 410.0], [223.0, 410.0], [223.0, 431.0], [5.0, 431.0]], Text: N:0318-411-12
+Bounding box: [[0.0, 473.0], [98.0, 475.0], [98.0, 504.0], [0.0, 502.0]], Text: TION:

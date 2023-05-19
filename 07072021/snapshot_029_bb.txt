@@ -1,0 +1,13 @@
+Bounding box: [[4.0, 56.0], [458.0, 57.0], [458.0, 81.0], [4.0, 80.0]], Text: ess for the Public Hearing Shall Be
+Bounding box: [[0.0, 133.0], [39.0, 133.0], [39.0, 159.0], [0.0, 159.0]], Text: on
+Bounding box: [[431.0, 125.0], [511.0, 132.0], [508.0, 161.0], [428.0, 154.0]], Text: D.Ap
+Bounding box: [[3.0, 168.0], [298.0, 166.0], [298.0, 190.0], [3.0, 192.0]], Text: esentative Presentation
+Bounding box: [[430.0, 164.0], [511.0, 164.0], [511.0, 192.0], [430.0, 192.0]], Text: E.Pul
+Bounding box: [[0.0, 206.0], [38.0, 206.0], [38.0, 232.0], [0.0, 232.0]], Text: nts
+Bounding box: [[429.0, 199.0], [511.0, 202.0], [511.0, 231.0], [428.0, 228.0]], Text: F.Co
+Bounding box: [[3.0, 276.0], [506.0, 277.0], [506.0, 304.0], [3.0, 303.0]], Text: Gauthier(Case No.21-039/SUP/ARC):
+Bounding box: [[4.0, 315.0], [499.0, 315.0], [499.0, 342.0], [4.0, 342.0]], Text: residential property, which is eight(8
+Bounding box: [[1.0, 351.0], [509.0, 353.0], [509.0, 380.0], [1.0, 378.0]], Text: view for an existing504 square foot unp
+Bounding box: [[14.0, 389.0], [505.0, 390.0], [505.0, 414.0], [14.0, 413.0]], Text: and a unpermitted 152 square foot c
+Bounding box: [[6.0, 427.0], [507.0, 425.0], [507.0, 449.0], [6.0, 451.0]], Text: ogs located at 32260 Avenue E:APN:
+Bounding box: [[140.0, 494.0], [241.0, 494.0], [241.0, 507.0], [140.0, 507.0]], Text: ot+hoD

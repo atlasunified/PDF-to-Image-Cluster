@@ -1,0 +1,7 @@
+Bounding box: [[3.0, 54.0], [493.0, 56.0], [493.0, 84.0], [3.0, 82.0]], Text: architectural design of the existing
+Bounding box: [[20.0, 95.0], [508.0, 93.0], [508.0, 119.0], [20.0, 121.0]], Text: applicant's proposal for dog breedi
+Bounding box: [[8.0, 131.0], [501.0, 127.0], [501.0, 157.0], [8.0, 161.0]], Text: approve the design and accessory use
+Bounding box: [[3.0, 241.0], [509.0, 239.0], [509.0, 267.0], [3.0, 269.0]], Text: pecial Use Permit Findings as containe
+Bounding box: [[2.0, 315.0], [508.0, 314.0], [508.0, 341.0], [2.0, 342.0]], Text: tegorical Exemption pursuant to the C
+Bounding box: [[2.0, 351.0], [509.0, 350.0], [509.0, 377.0], [2.0, 378.0]], Text: e CEQA Guidelines,as amended.Sect
+Bounding box: [[6.0, 423.0], [392.0, 425.0], [392.0, 452.0], [6.0, 450.0]], Text: to file a Notice of Exemption.

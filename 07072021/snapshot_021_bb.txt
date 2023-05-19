@@ -1,0 +1,4 @@
+Bounding box: [[6.0, 183.0], [506.0, 183.0], [506.0, 203.0], [6.0, 203.0]], Text: OVEPLANNINGCOMMISSIONMI
+Bounding box: [[2.0, 249.0], [508.0, 252.0], [508.0, 276.0], [2.0, 273.0]], Text: TION: That the Commission approve
+Bounding box: [[3.0, 319.0], [508.0, 319.0], [508.0, 342.0], [3.0, 342.0]], Text: ON TO APPROVE BY COMMISS
+Bounding box: [[3.0, 356.0], [507.0, 356.0], [507.0, 379.0], [3.0, 379.0]], Text: RBECK.MOTIONCARRIED5-0-0
