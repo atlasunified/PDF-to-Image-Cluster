@@ -5,12 +5,18 @@ import pandas as pd
 import urllib.request
 from pdf2image import convert_from_path
 from paddleocr import PaddleOCR
+import random
 
-def convert_pdf_to_images(pdf_path, snapshot_size=(512, 512)):
+def convert_pdf_to_images(pdf_path, min_snapshot_size=336, max_snapshot_size=768):
     pages = convert_from_path(pdf_path)
-    snapshots = [extract_snapshots(page, snapshot_size) for page in pages]
+    snapshots = [extract_snapshots(page, random_snapshot_size(min_snapshot_size, max_snapshot_size)) for page in pages]
        
     return snapshots
+
+def random_snapshot_size(min_size, max_size):
+    # Randomly select a size for the snapshot
+    snapshot_size = random.randint(min_size, max_size)
+    return (snapshot_size, snapshot_size)
 
 def extract_snapshots(image, snapshot_size=(512, 512)):
     width, height = image.size
@@ -39,7 +45,9 @@ def save_snapshot_image(image, snapshot_idx, output_dir):
     image_path = f"{output_dir}/snapshot_{snapshot_idx:03}.png"
     image.save(image_path)
 
-def save_results(snapshots, text_and_boxes, output_folder):
+from PIL import Image
+
+def save_results(snapshots, text_and_boxes, output_folder, resized_size=(336, 336)):
     os.makedirs(output_folder, exist_ok=True)
 
     snapshot_counter = 0
@@ -74,9 +82,16 @@ def save_results(snapshots, text_and_boxes, output_folder):
                     if os.path.exists(image_path):
                         os.remove(image_path)
                         
+                # Resize the snapshot image to 336x336
+                else:
+                    with Image.open(image_path) as img:
+                        resized_img = img.resize(resized_size)
+                        resized_img.save(image_path)
+                        
                 snapshot_counter += 1
             output_file.flush()
             os.fsync(output_file.fileno())
+
 
 def move_files(src_dir, dst_dir):
     if not os.path.exists(dst_dir):
