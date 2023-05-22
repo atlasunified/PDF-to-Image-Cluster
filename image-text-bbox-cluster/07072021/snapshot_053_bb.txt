@@ -1,6 +1,0 @@
-Bounding box: [[12.0, 41.0], [502.0, 41.0], [502.0, 65.0], [12.0, 65.0]], Text: architectural design of the existing RV
-Bounding box: [[5.0, 77.0], [504.0, 77.0], [504.0, 101.0], [5.0, 101.0]], Text: ubject to the Conditions of Approval:
-Bounding box: [[3.0, 151.0], [507.0, 149.0], [507.0, 176.0], [3.0, 178.0]], Text: pecial Use Permit Findings as containe
-Bounding box: [[2.0, 226.0], [508.0, 223.0], [508.0, 250.0], [2.0, 253.0]], Text: tegorical Exemption pursuant to the C
-Bounding box: [[5.0, 263.0], [508.0, 263.0], [508.0, 286.0], [5.0, 286.0]], Text: e CEQA Guidelines.as amended.Sect
-Bounding box: [[5.0, 333.0], [389.0, 335.0], [389.0, 362.0], [5.0, 360.0]], Text: to file a Notice of Exemption

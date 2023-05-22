@@ -1,2 +1,0 @@
-Bounding box: [[5.0, 251.0], [494.0, 250.0], [494.0, 278.0], [5.0, 279.0]], Text: llegiance led by Commissioner Hicks
-Bounding box: [[4.0, 467.0], [500.0, 468.0], [500.0, 495.0], [4.0, 494.0]], Text: tin of Yucaipa sent an email stating he

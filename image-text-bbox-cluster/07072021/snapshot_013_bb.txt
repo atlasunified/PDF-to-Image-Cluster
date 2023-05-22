@@ -1,7 +1,0 @@
-Bounding box: [[12.0, 5.0], [318.0, 8.0], [318.0, 21.0], [12.0, 18.0]], Text: ewitnourneXtprojects
-Bounding box: [[437.0, 7.0], [502.0, 7.0], [502.0, 17.0], [437.0, 17.0]], Text: ac
-Bounding box: [[5.0, 193.0], [507.0, 191.0], [507.0, 215.0], [5.0, 217.0]], Text: Agenda items are expected to be routin
-Bounding box: [[3.0, 229.0], [509.0, 226.0], [509.0, 253.0], [3.0, 256.0]], Text: upon them, at one time,without discu
-Bounding box: [[2.0, 263.0], [507.0, 265.0], [507.0, 293.0], [2.0, 291.0]], Text: emoval of an item from the Consent Ag
-Bounding box: [[9.0, 311.0], [506.0, 311.0], [506.0, 335.0], [9.0, 335.0]], Text: be read. and further reading waived o
-Bounding box: [[3.0, 345.0], [237.0, 348.0], [237.0, 376.0], [3.0, 373.0]], Text: ding and adoption.

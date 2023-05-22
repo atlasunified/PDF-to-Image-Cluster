@@ -1,8 +1,0 @@
-Bounding box: [[188.0, 60.0], [324.0, 62.0], [324.0, 90.0], [188.0, 88.0]], Text: ABSENT:
-Bounding box: [[380.0, 60.0], [510.0, 60.0], [510.0, 91.0], [380.0, 91.0]], Text: Lloyd Rel
-Bounding box: [[383.0, 104.0], [507.0, 104.0], [507.0, 132.0], [383.0, 132.0]], Text: Christoph
-Bounding box: [[177.0, 185.0], [509.0, 185.0], [509.0, 208.0], [177.0, 208.0]], Text: CONVENEPLANNING
-Bounding box: [[174.0, 252.0], [507.0, 251.0], [507.0, 278.0], [174.0, 279.0]], Text: The meeting was called to
-Bounding box: [[175.0, 326.0], [362.0, 326.0], [362.0, 353.0], [175.0, 353.0]], Text: ROLLCALL
-Bounding box: [[176.0, 401.0], [486.0, 400.0], [486.0, 424.0], [176.0, 425.0]], Text: PUBLIC COMMENT
-Bounding box: [[177.0, 469.0], [508.0, 469.0], [508.0, 493.0], [177.0, 493.0]], Text: One email was sent to Pul

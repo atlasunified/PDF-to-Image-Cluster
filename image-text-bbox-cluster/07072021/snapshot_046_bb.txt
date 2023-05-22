@@ -1,8 +1,0 @@
-Bounding box: [[6.0, 6.0], [496.0, 4.0], [496.0, 28.0], [6.0, 30.0]], Text: ing Unit, and Special Use Permit with
-Bounding box: [[6.0, 41.0], [497.0, 41.0], [497.0, 68.0], [6.0, 68.0]], Text: and 462 square foot garage attached to
-Bounding box: [[6.0, 146.0], [383.0, 146.0], [383.0, 173.0], [6.0, 173.0]], Text: onduct a public hearing, and:
-Bounding box: [[9.0, 220.0], [495.0, 217.0], [495.0, 247.0], [9.0, 250.0]], Text: garages, and if they are acceptable
-Bounding box: [[2.0, 256.0], [140.0, 256.0], [140.0, 284.0], [2.0, 284.0]], Text: roval;and
-Bounding box: [[4.0, 330.0], [357.0, 330.0], [357.0, 357.0], [4.0, 357.0]], Text: I in the Agenda Report; and
-Bounding box: [[2.0, 403.0], [501.0, 404.0], [501.0, 431.0], [2.0, 430.0]], Text: lifornia Environmental Quality Act of
-Bounding box: [[5.0, 442.0], [301.0, 442.0], [301.0, 466.0], [5.0, 466.0]], Text: n 15303(Class 3:and

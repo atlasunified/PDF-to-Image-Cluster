@@ -1,9 +1,0 @@
-Bounding box: [[3.0, 30.0], [508.0, 28.0], [508.0, 52.0], [3.0, 54.0]], Text: nes at Holmes and Bella Vista.APN:1
-Bounding box: [[3.0, 97.0], [503.0, 100.0], [503.0, 124.0], [3.0, 121.0]], Text: TION: That the Planning Commission
-Bounding box: [[6.0, 137.0], [506.0, 137.0], [506.0, 161.0], [6.0, 161.0]], Text: s,and conceptual landscaping for the s
-Bounding box: [[3.0, 171.0], [506.0, 170.0], [506.0, 198.0], [3.0, 199.0]], Text: Vista and approve Case No.21-079/AR
-Bounding box: [[5.0, 246.0], [491.0, 246.0], [491.0, 270.0], [5.0, 270.0]], Text: Assistant Planner. Christian Farmer
-Bounding box: [[7.0, 285.0], [502.0, 285.0], [502.0, 309.0], [7.0, 309.0]], Text: sed the fencing surrounding the project
-Bounding box: [[10.0, 321.0], [507.0, 321.0], [507.0, 345.0], [10.0, 345.0]], Text: owners on their choice in perimeter fei
-Bounding box: [[4.0, 393.0], [507.0, 393.0], [507.0, 416.0], [4.0, 416.0]], Text: ON BY COMMISSIONER HICKS
-Bounding box: [[5.0, 431.0], [508.0, 431.0], [508.0, 451.0], [5.0, 451.0]], Text: PROVESTAFFRECOMMENDAT
