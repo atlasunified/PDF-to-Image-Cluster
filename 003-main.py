@@ -5,7 +5,6 @@ import pandas as pd
 import urllib.request
 from pdf2image import convert_from_path
 from paddleocr import PaddleOCR
-from PIL import Image
 
 def convert_pdf_to_images(pdf_path, snapshot_size=(512, 512)):
     pages = convert_from_path(pdf_path)
