@@ -10,7 +10,7 @@ from PIL import Image
 def convert_pdf_to_images(pdf_path, snapshot_size=(512, 512)):
     pages = convert_from_path(pdf_path)
     snapshots = [extract_snapshots(page, snapshot_size) for page in pages]
-
+       
     return snapshots
 
 def extract_snapshots(image, snapshot_size=(512, 512)):
@@ -54,13 +54,20 @@ def save_results(snapshots, text_and_boxes, output_folder):
                 image_path = f"{output_folder}/snapshot_{snapshot_counter:03}.png"
                 save_snapshot_image(snapshot_image, snapshot_counter, output_folder)
                 
+                # Get the dimensions of the snapshot image for normalization
+                img_width, img_height = snapshot_image.size
+                
                 # Save bounding box and text information
                 bb_file_path = f"{output_folder}/snapshot_{snapshot_counter:03}_bb.txt"
                 with open(bb_file_path, "w") as bb_file:
                     for line in result:
                         if len(line) >= 2 and len(line[1]) > 0:
-                            bbox, text = line[0], line[1][0]
+                            # Normalize bounding box coordinates
+                            bbox = [[coord[0] / img_width, coord[1] / img_height] for coord in line[0]]
+                            text = line[1][0]
                             bb_file.write(f"Bounding box: {bbox}, Text: {text}\n")
+                    bb_file.flush()
+                    os.fsync(bb_file.fileno())
                 
                 # Check if bounding box text file is empty and if so delete it and its corresponding image
                 if os.stat(bb_file_path).st_size == 0:
@@ -69,8 +76,8 @@ def save_results(snapshots, text_and_boxes, output_folder):
                         os.remove(image_path)
                         
                 snapshot_counter += 1
-
-            output_file.write("\n")
+            output_file.flush()
+            os.fsync(output_file.fileno())
 
 def move_files(src_dir, dst_dir):
     if not os.path.exists(dst_dir):
@@ -82,9 +89,6 @@ def move_files(src_dir, dst_dir):
         shutil.move(src_path, dst_path)
 
 def download_pdf(url, filename):
-    """
-    Download a PDF from a URL and save it to a local file
-    """
     try:
         urllib.request.urlretrieve(url, filename)
         print(f'Successfully downloaded file from {url} to {filename}')
@@ -94,10 +98,6 @@ def download_pdf(url, filename):
         return 'error'
 
 def process_urls(csv_filepath):
-    """
-    Process each URL in a CSV file: download the PDF, convert it to images,
-    extract text and bounding boxes with OCR, and save the results
-    """
     try:
         # Read the csv file
         dataframe = pd.read_csv(csv_filepath)
@@ -135,7 +135,16 @@ if __name__ == "__main__":
     # Ensure the temporary directory for downloaded PDFs exists
     os.makedirs('tmp', exist_ok=True)
 
-    # Process all URLs in all CSV files in the directory
-    for filename in os.listdir(directory):
-        if filename.endswith('.csv'):
+    csv_files = [filename for filename in os.listdir(directory) if filename.endswith('.csv')]
+
+    if csv_files:
+        # Process all URLs in all CSV files in the directory
+        for filename in csv_files:
             process_urls(os.path.join(directory, filename))
+    else:
+        # If there are no CSV files, process all PDF files in the 'tmp' directory directly
+        for filename in os.listdir('tmp'):
+            if filename.endswith('.pdf'):
+                pdf_path = os.path.join('tmp', filename)
+                output_folder = 'image-text-bbox-cluster/' + filename.split('.')[0]
+                main(pdf_path, output_folder)
