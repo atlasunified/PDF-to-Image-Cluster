@@ -1,0 +1,9 @@
+Bounding box: [[0.009765625, 0.013671875], [0.96875, 0.0078125], [0.96875, 0.044921875], [0.009765625, 0.05078125]], Text: ny classical scheme is the fact that
+Bounding box: [[0.0078125, 0.11328125], [0.986328125, 0.11328125], [0.986328125, 0.166015625], [0.0078125, 0.166015625]], Text: itercepted, hence eavesdropping at
+Bounding box: [[0.00390625, 0.23046875], [0.990234375, 0.22265625], [0.990234375, 0.275390625], [0.00390625, 0.283203125]], Text: e presence of noisy channels and 
+Bounding box: [[0.00390625, 0.33984375], [0.99609375, 0.341796875], [0.99609375, 0.39453125], [0.00390625, 0.392578125]], Text: iantum key distribution is proven s
+Bounding box: [[0.009765625, 0.453125], [0.98828125, 0.453125], [0.98828125, 0.5], [0.009765625, 0.5]], Text: nall amount of information while i
+Bounding box: [[0.009765625, 0.56640625], [0.990234375, 0.56640625], [0.990234375, 0.619140625], [0.009765625, 0.619140625]], Text: ne legitimate users must correct the
+Bounding box: [[0.0078125, 0.67578125], [0.982421875, 0.677734375], [0.982421875, 0.73828125], [0.0078125, 0.736328125]], Text: nd the eavesdropper can obtain this
+Bounding box: [[0.005859375, 0.794921875], [0.9921875, 0.796875], [0.9921875, 0.849609375], [0.005859375, 0.84765625]], Text: ication techniques were suggested ti
+Bounding box: [[0.015625, 0.912109375], [0.982421875, 0.912109375], [0.982421875, 0.958984375], [0.015625, 0.958984375]], Text: nplete proof of security yet. As is
