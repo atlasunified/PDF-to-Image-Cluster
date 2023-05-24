@@ -1,3 +1,4 @@
+import concurrent.futures
 import os
 import shutil
 import numpy as np
@@ -6,6 +7,7 @@ import urllib.request
 from pdf2image import convert_from_path
 from paddleocr import PaddleOCR
 import random
+from PIL import Image
 
 def convert_pdf_to_images(pdf_path, min_snapshot_size=336, max_snapshot_size=768):
     pages = convert_from_path(pdf_path)
@@ -106,10 +108,10 @@ def download_pdf(url, filename):
     try:
         urllib.request.urlretrieve(url, filename)
         print(f'Successfully downloaded file from {url} to {filename}')
-        return 'complete'
+        return True  # Return True on success
     except Exception as e:
         print(f'Error downloading file from {url}: {e}')
-        return 'error'
+        return False  # Return False on failure
 
 def process_urls(csv_filepath):
     try:
@@ -135,6 +137,37 @@ def process_urls(csv_filepath):
     except Exception as e:
         print(f'An error occurred while processing the URLs in {csv_filepath}: {e}')
 
+def process_single_url(url):
+    try:
+        filename = url.split("/")[-1]
+        output_folder = 'image-text-bbox-cluster/' + filename.split('.')[0]
+
+        # Download the PDF
+        pdf_filepath = f'tmp/{filename}'
+        success = download_pdf(url, pdf_filepath)
+        if success:
+            # Process the PDF
+            main(pdf_filepath, output_folder)
+
+            # Move the PDF to the output folder
+            shutil.move(pdf_filepath, output_folder)
+        else:
+            print(f'Skipping URL {url} due to download error')
+    except Exception as e:
+        print(f'An error occurred while processing the URL {url}: {e}')
+
+
+def process_urls(csv_filepath):
+    try:
+        # Read the csv file
+        dataframe = pd.read_csv(csv_filepath)
+
+        # Process each URL
+        urls = dataframe['URL']
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            executor.map(process_single_url, urls)
+    except Exception as e:
+        print(f'An error occurred while processing the URLs in {csv_filepath}: {e}')
 
 def main(pdf_path, output_folder):
     snapshots = convert_pdf_to_images(pdf_path)
