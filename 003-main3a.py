@@ -119,7 +119,7 @@ def main(pdf_path, output_folder):
 
 if __name__ == "__main__":
     # Directory containing the PDF files
-    directory = 'tmp'
+    directory = 'tmp3'
 
     if os.path.exists(directory):
         # Get the list of PDF files, including those in subdirectories
@@ -133,7 +133,7 @@ if __name__ == "__main__":
 
             # Use a process pool to process each PDF file
             with concurrent.futures.ProcessPoolExecutor(max_workers=os.cpu_count()) as executor:
-                futures = {executor.submit(main, pdf_file, 'image-text-bbox-cluster/' + os.path.basename(pdf_file).split('.')[0]): pdf_file for pdf_file in pdf_files}
+                futures = {executor.submit(main, pdf_file, 'image-text-bbox-cluster2/' + os.path.basename(pdf_file).split('.')[0]): pdf_file for pdf_file in pdf_files}
                 
                 for future in concurrent.futures.as_completed(futures):
                     pdf_file = futures[future]

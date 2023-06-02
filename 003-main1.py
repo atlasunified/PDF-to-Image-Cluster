@@ -119,7 +119,7 @@ def main(pdf_path, output_folder):
 
 if __name__ == "__main__":
     # Directory containing the PDF files
-    directory = 'tmp'
+    directory = 'tmp1'
 
     if os.path.exists(directory):
         # Get the list of PDF files, including those in subdirectories
