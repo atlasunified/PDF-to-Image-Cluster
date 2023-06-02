@@ -4,7 +4,7 @@ The scripts collectively serve to automate the process of downloading, convertin
 
 Also added is an elegant python script for BLiP2 captioning using FP16 and a HuggingFace implementation. Works just fine with these scripts.
 
-![Diagram](picture1.png)
+![Diagram](Picture1.png)
 
 ## File Outline
 
