@@ -11,13 +11,13 @@ Follow these steps for the execution of the script:
 3. If it does not exist, create the directory and print a message saying `"Directory [download_path] created"`.
 
 4. Call the `scrape_and_download()` function, passing the `base_url`, `page_url`, and `download_path` as arguments. This function does the following:
-   - Sends a GET request to the `page_url` and parses the page content with BeautifulSoup.
-   - Finds all `<a>` tags in the parsed HTML (these tags usually contain hyperlinks).
-   - For each `<a>` tag:
-     - Get the 'href' attribute of the tag, which usually represents the URL of the linked resource.
-     - If the URL ends with `.snappy.parquet`, create the full URL of the file by joining the `base_url` and the URL from the 'href' attribute.
-     - Print a message saying `"Downloading [full_url]"`.
-     - Call the `download_file()` function with the full URL and the `download_path` as arguments. This function does the following:
+   - a) Sends a GET request to the `page_url` and parses the page content with BeautifulSoup.
+   - b) Finds all `<a>` tags in the parsed HTML (these tags usually contain hyperlinks).
+   - c) For each `<a>` tag:
+     - (i) Get the 'href' attribute of the tag, which usually represents the URL of the linked resource.
+     - (ii) If the URL ends with `.snappy.parquet`, create the full URL of the file by joining the `base_url` and the URL from the 'href' attribute.
+     - (iii) Print a message saying `"Downloading [full_url]"`.
+     - (iv) Call the `download_file()` function with the full URL and the `download_path` as arguments. This function does the following:
 
 5. Splits the URL to extract the filename and joins it with the `download_path`.
 
