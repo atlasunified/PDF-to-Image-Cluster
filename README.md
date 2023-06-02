@@ -2,6 +2,8 @@
 
 The scripts collectively serve to automate the process of downloading, converting, and processing various files from web sources. They incorporate features such as file management, web scraping, data conversion, concurrent processing, text extraction, URL downloading, file archiving, and file distribution balancing.
 
+Also added is an elegant python script for BLiP2 captioning using FP16 and a HuggingFace implementation.
+
 ## File Outline
 
 000-downloader.py is responsible for downloading files (specifically .snappy.parquet files) from a base URL. It creates the directory if it doesn't exist and downloads the files into the specified directory. It also handles large file downloads by downloading in chunks.
@@ -291,3 +293,34 @@ Follow these steps for the execution of the script:
 4. If the script is run as the main module, call the `balance_folders()` function.
 
 5. End
+
+# Image Captioning Script - 006-captioner.py
+
+Follow these steps for the execution of the script:
+
+1. Start
+
+2. Set environment variable "USE_FP16" to "1". This makes the model use half precision (float16) instead of the default float32, which reduces memory usage and speeds up model training.
+
+3. Import necessary libraries and modules.
+
+4. Initialize the accelerator object. This provides a unified API for model training on any hardware.
+
+5. Initialize the processor and model using pre-trained weights from Salesforce's blip2. Then prepare the model for the accelerator.
+
+6. Define the `caption_images()` function:
+   - (a) Initialize the image counter.
+   - (b) Walk through the image folder and its subdirectories:
+     - (i) For each file in the current directory:
+   
+7. If the file ends with ".png":
+   - (a) Open the image and convert it to RGB.
+   - (b) Preprocess the image with the Blip2Processor and move it to the device being used by the accelerator.
+   - (c) Generate a caption with a maximum of 50 new tokens.
+   - (d) Decode the output and strip it of special tokens to get the caption.
+   - (e) Save the caption to a .txt file in the same directory and with the same base name as the image file.
+   - (f) Increment the image counter and print the current count.
+
+8. If the script is run as the main module, call the `caption_images()` function with the directory 'image-text-bbox-cluster' as the argument.
+
+9. End
