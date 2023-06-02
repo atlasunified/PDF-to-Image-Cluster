@@ -2,7 +2,7 @@
 
 The scripts collectively serve to automate the process of downloading, converting, and processing various files from web sources. They incorporate features such as file management, web scraping, data conversion, concurrent processing, text extraction, URL downloading, file archiving, and file distribution balancing.
 
-Also added is an elegant python script for BLiP2 captioning using FP16 and a HuggingFace implementation.
+Also added is an elegant python script for BLiP2 captioning using FP16 and a HuggingFace implementation. Works just fine with these scripts.
 
 ## File Outline
 
