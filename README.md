@@ -1,6 +1,6 @@
 # PDF-to-Image-Cluster
 
-The scripts collectively serve to automate the process of downloading, converting, and processing various files from web sources. They incorporate features such as file management, web scraping, data conversion, concurrent processing, text extraction, file archiving, and file distribution balancing.
+The scripts collectively serve to automate the process of downloading, converting, and processing various files from web sources. They incorporate features such as file management, web scraping, data conversion, concurrent processing, text extraction, URL downloading, file archiving, and file distribution balancing.
 
 ## File Outline
 
@@ -15,6 +15,44 @@ The scripts collectively serve to automate the process of downloading, convertin
 004-tarballer.py archives files in a directory (and its subdirectories) into a tar file. The progress of the archiving process is calculated and printed for each file added to the tar file. The original directory and its contents are then deleted.
 
 005-balancer.py balances the distribution of PDF files across several folders. It sorts all PDF files and redistributes them evenly among the folders. If the script is run as the main module, it calls the balance_folders() function.
+
+## Project Summary
+
+This project comprises a series of Python scripts designed to download, process, and manage datasets in various formats. The scripts are summarized as follows:
+
+000-downloader.py: This script scrapes a specified webpage for links ending in .snappy.parquet, downloads the linked files into a specified directory, and creates the directory if it doesn't exist.
+
+001-parquet-to-csv.py: This script converts Parquet files into CSV format. It reads the files into a pandas DataFrame, writes the DataFrame to a CSV file, and then removes the original Parquet file.
+
+002-url-extractor.py: This script extracts URLs from CSV files. It reads the CSV files, appends the URLs to a set (ignoring duplicates), and then splits the set of URLs into 50 parts, each written to a separate CSV file.
+
+003-download.py: This script downloads PDF files from a list of URLs. It checks for several conditions, such as whether the file has already been downloaded, the file size, and the number of pages in the PDF, before downloading the file. It also uses a ThreadPoolExecutor to download multiple PDFs in parallel.
+
+003-Main.py: This script processes PDF files using OCR. It sorts the PDF files by size, converts them into images, extracts text and bounding boxes from the images, and then saves the results. The PDF files are processed concurrently using a process pool executor.
+
+004-tarballer.py: This script creates a tarball (a compressed archive file) from a directory. It counts the total number of files in the directory and its subdirectories, adds the files to the tarball, and then deletes the original directory and its contents.
+
+005-balancer.py: This script balances the distribution of PDF files across several folders. It collects the paths of all PDF files, sorts them, and then redistributes them evenly across the folders.
+
+Each script has been carefully designed to handle exceptions and print informative error or success messages. Together, they form a robust pipeline for downloading, converting, and managing datasets.
+
+## Order of Execution
+
+This project is designed to be run in a specific sequence for optimal efficiency and resource usage. Here's the recommended order of execution:
+
+000-downloader.py: This script initiates the pipeline by downloading all .snappy.parquet files linked from a specified webpage. It creates the necessary directories if they do not exist.
+
+001-parquet-to-csv.py: This script converts the downloaded Parquet files into CSV files. It also removes the original Parquet files to save space.
+
+002-url-extractor.py: This script extracts URLs from the converted CSV files. These URLs are subsequently used for downloading PDF files.
+
+003-download.py: It's important to note that this script should be run with just one CSV file from the cc-strip directory at a time. This prevents your system from becoming overwhelmed with too many simultaneous downloads. This step will also create 4 temporary folders.
+
+005-balancer.py: Before running the main processing script, run this script to ensure the PDF files are evenly distributed across the four temporary folders. This is particularly beneficial if you're using a High Performance Computing (HPC) Cluster, as it facilitates an even distribution of workload.
+
+003-main.py, 003-main1.py, 003-main2.py, 003-main3.py: Finally, these scripts can be run concurrently. They perform OCR processing on the PDF files, generating text and bounding box information from the files.
+
+Running these scripts in this order will ensure a smooth, efficient workflow. Remember to monitor your system's resource usage, particularly when downloading and processing large numbers of files.
 
 ## Web Scraping and Download Script - 000-downloader.py
 
@@ -119,6 +157,43 @@ Follow these steps for the execution of the script:
 14. End of program.
 
 15. End
+
+## PDF Download Script - 003-download.py
+
+Follow these steps for the execution of the script:
+
+1. Start
+
+2. Import necessary libraries and modules.
+
+3. Define `folders` and `downloaded_files`. Set a cyclic iterator on the `folders`.
+
+4. Define the `download_pdf()` function:
+   - (a) Extract URL and folder from the input tuple.
+   - (b) Try to download the PDF:
+     - (i) Extract the filename from the URL.
+     - (ii) If the filename is already in the set of downloaded files, print a message and return None.
+     - (iii) Open the URL and get the file size from the response header.
+     - (iv) If the file size is more than 5MB, print a message and return None.
+     - (v) Retrieve the file from the URL and save it in the corresponding folder.
+     - (vi) Open the file with PyPDF2 and check the number of pages. If there are more than 20 pages, print a message, remove the file, and return None.
+     - (vii) If all checks are passed, add the filename to the set of downloaded files, print a success message, and return the file path.
+     - (viii) If there is an exception at any point, print an error message and return None.
+
+5. Define the `process_urls()` function:
+   - (a) Try to read the CSV file into a pandas DataFrame and extract the URLs.
+   - (b) Pair each URL with a folder from the cyclic iterator.
+   - (c) Use a ThreadPoolExecutor to download each PDF in parallel using the `download_pdf()` function.
+   - (d) If there is an exception at any point, print an error message.
+
+6. If the script is run as the main module:
+   - (a) Create all folders if they don't exist.
+   - (b) Get the list of all CSV files in the specified directory.
+   - (c) If there are any CSV files, process each one with the `process_urls()` function.
+   - (d) If there are no CSV files, print a message.
+
+7. End
+
 
 ## PDF Processing Script - 003-main.py
 
