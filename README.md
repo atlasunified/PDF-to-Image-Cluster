@@ -1,6 +1,6 @@
 # PDF-to-Image-Cluster
 
-## Web Scraping and Download Script
+## Web Scraping and Download Script - 000-downloader.py
 
 Follow these steps for the execution of the script:
 
@@ -32,3 +32,31 @@ Follow these steps for the execution of the script:
 10. Once all `<a>` tags have been processed and all matching files have been downloaded, the script ends.
 
 11. End.
+
+## Parquet to CSV Conversion Script - 001-parquet-to-csv.py
+
+Follow these steps for the execution of the script:
+
+1. Start
+
+2. Define the function `parquet_to_csv()`, which:
+   - a) Tries to:
+     - (i) Generate the csv filepath.
+     - (ii) Read the parquet file into a pandas dataframe.
+     - (iii) Write the dataframe to a csv file, specify escape character.
+     - (iv) Print a success message indicating the successful conversion from Parquet to CSV.
+     - (v) Remove the original parquet file.
+     - (vi) Print a success message indicating the successful deletion of the Parquet file.
+   - b) If any exception occurs during Steps 2.a.i-2.a.vi, it prints an error message.
+
+3. Define a directory string `cc-data`.
+
+4. For each filename in the directory:
+   - a) If the filename ends with '.parquet':
+     - (i) Call the `parquet_to_csv()` function on the file.
+
+5. End of process for each Parquet file.
+
+6. End of program.
+
+7. End
