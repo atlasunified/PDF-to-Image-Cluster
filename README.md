@@ -4,6 +4,8 @@ The scripts collectively serve to automate the process of downloading, convertin
 
 Also added is an elegant python script for BLiP2 captioning using FP16 and a HuggingFace implementation. Works just fine with these scripts.
 
+![Diagram](picture1.png)
+
 ## File Outline
 
 000-downloader.py is responsible for downloading files (specifically .snappy.parquet files) from a base URL. It creates the directory if it doesn't exist and downloads the files into the specified directory. It also handles large file downloads by downloading in chunks.
