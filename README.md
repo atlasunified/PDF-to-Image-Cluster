@@ -52,6 +52,8 @@ This project is designed to be run in a specific sequence for optimal efficiency
 
 003-main.py, 003-main1.py, 003-main2.py, 003-main3.py: Finally, these scripts can be run concurrently. They perform OCR processing on the PDF files, generating text and bounding box information from the files.
 
+004-tarballer.py: Once complete, run the tarballer to compress and eliminate the large number of files you have stored either on your computer or HPC instance.
+
 Running these scripts in this order will ensure a smooth, efficient workflow. Remember to monitor your system's resource usage, particularly when downloading and processing large numbers of files.
 
 ## Web Scraping and Download Script - 000-downloader.py
