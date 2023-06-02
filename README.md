@@ -1,5 +1,21 @@
 # PDF-to-Image-Cluster
 
+The scripts collectively serve to automate the process of downloading, converting, and processing various files from web sources. They incorporate features such as file management, web scraping, data conversion, concurrent processing, text extraction, file archiving, and file distribution balancing.
+
+## File Outline
+
+000-downloader.py is responsible for downloading files (specifically .snappy.parquet files) from a base URL. It creates the directory if it doesn't exist and downloads the files into the specified directory. It also handles large file downloads by downloading in chunks.
+
+001-parquet-to-csv.py converts Parquet files to CSV format. It navigates through the specified directory, identifies the Parquet files, reads them into a pandas dataframe, and writes them into a CSV file. The original Parquet files are then deleted.
+
+002-url-extractor.py extracts URLs from CSV files in a specified directory. Unique URLs are stored in a set, converted to a DataFrame, and divided into 50 equal parts. These chunks are written to separate CSV files in an output directory.
+
+003-Main.py handles the processing of PDF files within a directory. PDFs are sorted by size and processed concurrently, with Optical Character Recognition (OCR) extracting text and bounding boxes from the PDFs. The results are saved and the original PDF files are deleted. An error handling mechanism is included for failed processing attempts.
+
+004-tarballer.py archives files in a directory (and its subdirectories) into a tar file. The progress of the archiving process is calculated and printed for each file added to the tar file. The original directory and its contents are then deleted.
+
+005-balancer.py balances the distribution of PDF files across several folders. It sorts all PDF files and redistributes them evenly among the folders. If the script is run as the main module, it calls the balance_folders() function.
+
 ## Web Scraping and Download Script - 000-downloader.py
 
 Follow these steps for the execution of the script:
